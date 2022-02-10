@@ -90,10 +90,7 @@ class TimerActivity : AppCompatActivity() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        countdown_timer.cancel()
-    }
+
 
     private fun startTimer(total: Long ){
 
@@ -138,6 +135,10 @@ class TimerActivity : AppCompatActivity() {
             return num.toString()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        countdown_timer.cancel()
+    }
 
 
 }
